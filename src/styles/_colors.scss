@@ -1,0 +1,28 @@
+:root {
+	// Colors
+
+	// Base variables
+	--color-white: hsl(0, 0%, 100%);
+	--color-black: hsl(0, 0%, 0%);
+	--color-dark-gray: hsl(0, 0%, 13%);
+	--color-light-gray: hsl(0, 0%, 60%);
+	--color-dark-orange: hsl(15, 100%, 60%);
+	--color-med-orange: hsl(30, 100%, 60%);
+	--color-light-orange: hsl(20, 100%, 70%);
+	--color-pale-yellow: hsl(60, 100%, 97%);
+	--color-beige: hsl(30, 50%, 60%);
+	--color-green: hsl(72, 100%, 50%);
+
+	// Semantic variables
+	--color-app-background: var(--color-dark-gray);
+	--color-app-text: var(--color-white);
+	--color-input-text: var(--color-black);
+	--color-input-text-placeholder: var(--color-black);
+	--color-input-text-focus: var(--color-black);
+	--color-input-border-focus: var(--color-dark-orange);
+	--color-input-background-focus: var(--color-pale-yellow);
+	--color-input-text-placeholder-focus: var(--color-beige);
+	--color-input-shadow-focus: var(--color-light-orange);
+	--color-status-match: var(--color-green);
+	--color-status-mismatch: var(--color-med-orange);
+}

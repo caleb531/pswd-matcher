@@ -14,18 +14,18 @@
 	<p>Need to learn a new password? Learn it here!</p>
 
 	<form class="passwords">
-		<p class="reveal">
+		<p class="field reveal-passwords-field">
 			<label for="reveal-passwords">Reveal passwords?</label>
 			<input id="reveal-passwords" class="reveal-password" type="checkbox" value="" />
 		</p>
 
-		<p class="field password">
+		<p class="field">
 			<label for="initial-password">Password:</label>
 			<input type="password" placeholder="Type password" id="initial-password" class="password" />
 			<span class="password-length"></span>
 		</p>
 
-		<p class="field confirm">
+		<p class="field">
 			<label for="confirm-password">Confirm:</label>
 			<input
 				type="password"
@@ -37,8 +37,8 @@
 		</p>
 
 		<div class="match-container">
-			<p class="match status visible">Passwords match</p>
-			<p class="no-match status">Passwords do not match</p>
+			<p class="match match-status visible">Passwords match</p>
+			<p class="no-match match-status">Passwords do not match</p>
 		</div>
 	</form>
 

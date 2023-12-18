@@ -37,22 +37,23 @@ form {
 	text-align: right;
 }
 input.password {
-	font-size: var(--font-size-input);
+	font-size: var(--font-size-password-input);
 }
 
 /* Field label */
 label {
-	font-size: 16pt;
+	font-size: var(--font-size-password-label);
 	vertical-align: middle;
 }
-div.reveal {
+.field.reveal-passwords-field {
 	display: flex;
+	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
 	margin-top: 1em;
 	margin-bottom: 5px;
 	label {
-		font-size: 10pt;
+		font-size: var(--font-size-reveal-passwords);
 	}
 }
 
@@ -75,7 +76,7 @@ input.password {
 	background-clip: padding-box;
 	border-radius: 3px;
 	padding: 12px;
-	font-family: var(--font-family-input);
+	font-family: var(--font-family-password-input);
 	vertical-align: middle;
 	&::placeholder {
 		transition: color 250ms ease-in-out;
@@ -99,7 +100,7 @@ span.length {
 	top: 0;
 	right: 0;
 	margin-left: 20px;
-	font-size: 16pt;
+	font-size: var(--font-size-password-label);
 }
 
 /* Password status messages */
@@ -109,14 +110,14 @@ span.length {
 		visibility: visible;
 	}
 }
-.status {
+.match-status {
 	display: none;
 	margin: 0;
-	font-size: 16pt;
+	font-size: var(--font-size-status);
 	font-weight: 400;
 	text-align: right;
 }
-.status.visible {
+.match-status.visible {
 	display: block;
 }
 .match {

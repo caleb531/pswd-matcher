@@ -16,9 +16,12 @@
 
 	// Semantic variables
 	--font-family-primary: var(--font-family-sans-serif);
-	--font-family-input: var(--font-family-monospace);
+	--font-family-password-input: var(--font-family-monospace);
 	--font-size-text: var(--font-size-m);
 	--font-size-heading: var(--font-size-xxl);
 	--font-size-author-link: var(--font-size-xxs);
-	--font-size-input: var(--font-size-xl);
+	--font-size-password-label: var(--font-size-l);
+	--font-size-password-input: var(--font-size-xl);
+	--font-size-reveal-passwords: var(--font-size-xs);
+	--font-size-match-status: var(--font-size-xl);
 }

@@ -13,6 +13,7 @@
 	--font-size-l: calc(1rem * 20 / 16);
 	--font-size-xl: calc(1rem * 24 / 16);
 	--font-size-xxl: calc(1rem * 32 / 16);
+	--line-height-normal: 1.3;
 
 	// Semantic variables
 	--font-family-primary: var(--font-family-sans-serif);
@@ -24,4 +25,5 @@
 	--font-size-password-input: var(--font-size-xl);
 	--font-size-reveal-passwords: var(--font-size-xs);
 	--font-size-match-status: var(--font-size-xl);
+	--line-height-app-text: var(--line-height-normal);
 }

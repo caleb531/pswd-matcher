@@ -2,8 +2,14 @@
 	import '../styles/index.scss';
 </script>
 
+<svelte:head>
+	<title>Pswd Matcher | Caleb Evans</title>
+</svelte:head>
+
 <main class="app">
 	<h1>pswd matcher</h1>
+
+	<a class="author-link" href="https://calebevans.me/"><span class="by">by</span> Caleb Evans</a>
 
 	<p>Need to learn a new password? Learn it here!</p>
 

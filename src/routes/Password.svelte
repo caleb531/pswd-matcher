@@ -23,5 +23,6 @@
 	{placeholder}
 	{id}
 	on:input={(event) => updateValue(event)}
+	data-1p-ignore
 />
 <span class="password-length">{value.length || ''}</span>

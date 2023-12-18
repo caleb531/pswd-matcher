@@ -11,16 +11,14 @@
 	// <https://stackoverflow.com/a/57393751/560642>); to fix this, we can
 	// simply listen for the input's `input` event and update the variable
 	// accordingly
-	function updateValue(event: Event & { currentTarget: EventTarget & HTMLInputElement }) {
+	function updateValue(event: Event & { currentTarget: HTMLInputElement }) {
 		value = event.currentTarget.value ?? '';
 	}
 	// Switch focus to the other password input on the page when the Enter key
 	// is pressed; this is handled in an element-agnostic way such that we don't
 	// need a reference to the DOM element ahead of time, now do we need to
 	// query it with an arbitrary selector - we can just leverage the DOM API
-	function switchInputsOnEnter(
-		event: KeyboardEvent & { currentTarget: EventTarget & HTMLInputElement }
-	) {
+	function switchInputsOnEnter(event: KeyboardEvent & { currentTarget: HTMLInputElement }) {
 		if (event.key !== 'Enter') {
 			return;
 		}

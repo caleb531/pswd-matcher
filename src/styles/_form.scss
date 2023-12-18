@@ -13,26 +13,6 @@ form {
 	font-size: inherit;
 }
 
-.field[data-field-id='reveal-passwords'] {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
-	margin-top: var(--font-size-xl);
-	margin-bottom: 5px;
-	label {
-		font-size: var(--font-size-reveal-passwords);
-	}
-}
-
 label {
 	font-size: var(--font-size-password-label);
-}
-
-label[for='reveal-passwords'] {
-	margin-right: 0;
-	font-size: 1rem;
-}
-input#reveal-passwords {
-	margin-right: 0;
 }

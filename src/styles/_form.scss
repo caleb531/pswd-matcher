@@ -1,0 +1,35 @@
+form {
+	margin: 0 auto;
+	text-align: right;
+}
+
+.field {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 10px;
+	font-size: inherit;
+}
+
+.field[data-field-id='reveal-passwords'] {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: var(--font-size-xl);
+	margin-bottom: 5px;
+	label {
+		font-size: var(--font-size-reveal-passwords);
+	}
+}
+
+label {
+	font-size: var(--font-size-password-label);
+}
+
+label[for='reveal-passwords'] {
+	margin-right: 0;
+	font-size: 1rem;
+}

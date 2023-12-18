@@ -1,0 +1,21 @@
+.match-container {
+	visibility: hidden;
+	&.visible {
+		visibility: visible;
+	}
+}
+.match-status {
+	display: none;
+	margin: 0;
+	font-size: var(--font-size-match-status);
+	text-align: right;
+}
+.match-status.visible {
+	display: block;
+}
+.matching {
+	color: var(--color-status-match);
+}
+.not-matching {
+	color: var(--color-status-mismatch);
+}

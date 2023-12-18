@@ -1,5 +1,15 @@
 <script lang="ts">
 	import '../styles/index.scss';
+	import Field from './Field.svelte';
+	import MatchStatus from './MatchStatus.svelte';
+	import Password from './Password.svelte';
+	import RevealPasswordsToggle from './RevealPasswordsToggle.svelte';
+
+	// Keep track of passwords being entered for comparison
+	let initialPassword = '';
+	let confirmPassword = '';
+	// A boolean to keep track of when the password inputs are revealed
+	let arePasswordsRevealed = false;
 </script>
 
 <svelte:head>
@@ -14,32 +24,29 @@
 	<p>Need to learn a new password? Learn it here!</p>
 
 	<form class="passwords">
-		<p class="field reveal-passwords-field">
-			<label for="reveal-passwords">Reveal passwords?</label>
-			<input id="reveal-passwords" class="reveal-password" type="checkbox" value="" />
-		</p>
+		<Field id="reveal-passwords">
+			<RevealPasswordsToggle bind:enabled={arePasswordsRevealed} />
+		</Field>
 
-		<p class="field">
-			<label for="initial-password">Password:</label>
-			<input type="password" placeholder="Type password" id="initial-password" class="password" />
-			<span class="password-length"></span>
-		</p>
-
-		<p class="field">
-			<label for="confirm-password">Confirm:</label>
-			<input
-				type="password"
-				placeholder="Confirm password"
-				id="confirm-password"
-				class="password"
+		<Field id="initial-password">
+			<Password
+				id="initial-password"
+				placeholder="Type password"
+				bind:value={initialPassword}
+				reveal={arePasswordsRevealed}
 			/>
-			<span class="confirm-length"></span>
-		</p>
+		</Field>
 
-		<div class="match-container">
-			<p class="match match-status visible">Passwords match</p>
-			<p class="no-match match-status">Passwords do not match</p>
-		</div>
+		<Field id="confirm-password">
+			<Password
+				id="confirm-password"
+				placeholder="Confirm password"
+				bind:value={confirmPassword}
+				reveal={arePasswordsRevealed}
+			/>
+		</Field>
+
+		<MatchStatus {initialPassword} {confirmPassword} />
 	</form>
 
 	<p><strong>Disclaimer:</strong> Nothing you type here is sent or stored anywhere. Period.</p>

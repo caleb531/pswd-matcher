@@ -1,38 +1,28 @@
-# create-svelte
+# pswd-matcher
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A simple application which serves as a secure space for you to learn a new
+password.
 
-## Creating a project
+Live App: https://projects.calebevans.me/pswd-matcher/
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Setup
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Installing
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This project uses [pnpm][pnpm] (instead of npm) for package installation and
+management.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+[pnpm]: https://pnpm.io/
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm install -g pnpm
+pnpm install
 ```
 
-## Building
-
-To create a production version of your app:
+### Serving the site
 
 ```bash
-npm run build
+pnpm dev
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+The site will then be viewable in your browser at http://localhost:5173.

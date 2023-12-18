@@ -14,27 +14,27 @@
 	<p>Need to learn a new password? Learn it here!</p>
 
 	<form class="passwords">
-		<div class="reveal">
+		<p class="reveal">
 			<label for="reveal-passwords">Reveal passwords?</label>
-			<input id="reveal-passwords" class="reveal" type="checkbox" value="" />
-		</div>
+			<input id="reveal-passwords" class="reveal-password" type="checkbox" value="" />
+		</p>
 
-		<div class="field password">
-			<label for="password">Password:</label>
-			<input type="password" placeholder="Type password" id="password" class="password" />
+		<p class="field password">
+			<label for="initial-password">Password:</label>
+			<input type="password" placeholder="Type password" id="initial-password" class="password" />
 			<span class="password-length"></span>
-		</div>
+		</p>
 
-		<div class="field confirm">
+		<p class="field confirm">
 			<label for="confirm-password">Confirm:</label>
 			<input
 				type="password"
 				placeholder="Confirm password"
 				id="confirm-password"
-				class="password confirm"
+				class="password"
 			/>
 			<span class="confirm-length"></span>
-		</div>
+		</p>
 
 		<div class="match-container">
 			<p class="match status visible">Passwords match</p>

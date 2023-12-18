@@ -41,9 +41,6 @@ p.disclaimer {
 form {
 	margin: 0 auto;
 	text-align: right;
-	@media screen and (max-width: 600px) {
-		text-align: left;
-	}
 }
 form,
 input.password {
@@ -66,13 +63,15 @@ div.reveal {
 	}
 }
 
-div.field {
+.field {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
 	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: inherit;
 }
 
 /* Inputs */
@@ -124,9 +123,9 @@ span.length {
 	color: #f93;
 }
 
-label[for='reveal'] {
+label[for='reveal-passwords'] {
 	margin-right: 0;
-	font-size: 14pt;
+	font-size: 1rem;
 	vertical-align: middle;
 }
 input[type='checkbox'] {

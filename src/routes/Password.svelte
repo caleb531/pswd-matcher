@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let id: string;
+	export let label: string;
 	export let placeholder: string;
 	export let value: string;
 	// Whether or not the actual password is shown within the input
@@ -15,7 +16,7 @@
 	}
 </script>
 
-<label for={id}>Password:</label>
+<label for={id}>{label}:</label>
 <input
 	type={reveal ? 'text' : 'password'}
 	class="password"

@@ -31,6 +31,7 @@
 		<Field id="initial-password">
 			<Password
 				id="initial-password"
+				label="Password"
 				placeholder="Type password"
 				bind:value={initialPassword}
 				reveal={arePasswordsRevealed}
@@ -40,6 +41,7 @@
 		<Field id="confirm-password">
 			<Password
 				id="confirm-password"
+				label="Confirm"
 				placeholder="Confirm password"
 				bind:value={confirmPassword}
 				reveal={arePasswordsRevealed}

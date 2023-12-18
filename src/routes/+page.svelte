@@ -51,5 +51,12 @@
 		<MatchStatus {initialPassword} {confirmPassword} />
 	</form>
 
-	<p><strong>Disclaimer:</strong> Nothing you type here is sent or stored anywhere. Period.</p>
+	<p>
+		<strong>Disclaimer:</strong> Nothing you type here is sent or stored anywhere. The entire
+		project is open-source, and you can
+		<a href="https://github.com/caleb531/pswd-matcher" target="_blank" rel="noopener"
+			>browse the source code on GitHub</a
+		>
+		if you'd like to see how it works.
+	</p>
 </main>

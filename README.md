@@ -1,5 +1,8 @@
 # pswd-matcher
 
+_Copyright 2023, Caleb Evans_  
+_Released under the MIT license_
+
 A simple application which serves as a secure space for you to learn a new
 password.
 

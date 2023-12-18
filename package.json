@@ -31,5 +31,18 @@
 		"vite": "^5.0.10",
 		"vitest": "^1.0.4"
 	},
-	"type": "module"
+	"type": "module",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"author": "Caleb Evans",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/caleb531/pswd-matcher/issues"
+	},
+	"homepage": "https://github.com/caleb531/pswd-matcher#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/caleb531/pswd-matcher.git"
+	}
 }

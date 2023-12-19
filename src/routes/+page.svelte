@@ -14,6 +14,10 @@
 
 <svelte:head>
 	<title>Pswd Matcher | Caleb Evans</title>
+	<meta
+		name="description"
+		content="Need to learn a new password? Learn it here! This is a secure space to type and retype your password multiple times until you've got it down."
+	/>
 </svelte:head>
 
 <main class="app">

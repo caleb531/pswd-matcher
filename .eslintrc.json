@@ -17,5 +17,13 @@
 		"browser": true,
 		"es2017": true,
 		"node": true
-	}
+	},
+	"overrides": [
+		{
+			"files": ["src/*.test.ts"],
+			"globals": {
+				"vi": true
+			}
+		}
+	]
 }

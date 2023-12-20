@@ -1,7 +1,12 @@
-import { describe, it, expect } from 'vitest';
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/svelte';
+import page from './routes/+page.svelte';
 
-describe('sum test', () => {
-	it('adds 1 + 2 to equal 3', () => {
-		expect(1 + 2).toBe(3);
+describe('pswd matcher', () => {
+	it('should load application with empty inputs', () => {
+		render(page);
+		expect(screen.getByRole('heading', { name: 'pswd matcher' })).toBeInTheDocument();
+		expect(screen.getByLabelText('Password:')).toHaveValue('');
+		expect(screen.getByLabelText('Confirm:')).toHaveValue('');
 	});
 });

@@ -5,12 +5,12 @@
 
 <div
 	class="match-status-container"
-	aria-hidden={!(initialPassword !== '' && confirmPassword !== '')}
+	style:visibility={initialPassword !== '' && confirmPassword !== '' ? 'visible' : 'hidden'}
 	aria-live="polite"
 >
 	{#if initialPassword === confirmPassword}
-		<p class="match-status matching">Passwords match</p>
+		<p class="match-status matching" aria-hidden="true">Passwords match</p>
 	{:else}
-		<p class="match-status not-matching">Passwords do not match</p>
+		<p class="match-status not-matching" aria-hidden="true">Passwords do not match</p>
 	{/if}
 </div>

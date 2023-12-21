@@ -32,3 +32,17 @@ pnpm dev
 ```
 
 The site will then be viewable in your browser at http://localhost:5173.
+
+## Running tests
+
+You can run tests like so:
+
+```sh
+pnpm test
+```
+
+If you want to calculate code coverage, run:
+
+```sh
+pnpm coverage
+```

@@ -6,6 +6,9 @@ _Released under the MIT license_
 A simple application which serves as a secure space for you to learn a new
 password.
 
+[![tests](https://github.com/caleb531/pswd-matcher/actions/workflows/tests.yml/badge.svg)](https://github.com/caleb531/pswd-matcher/actions/workflows/tests.yml)
+[![Coverage Status](https://coveralls.io/repos/github/caleb531/pswd-matcher/badge.svg?branch=main)](https://coveralls.io/github/caleb531/pswd-matcher?branch=main)
+
 Live App: https://projects.calebevans.me/pswd-matcher/
 
 ## Setup

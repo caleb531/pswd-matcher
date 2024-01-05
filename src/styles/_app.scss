@@ -10,6 +10,9 @@ body {
 	line-height: var(--line-height-app-text);
 	color: var(--color-app-text);
 }
+.app-wrapper {
+	display: contents;
+}
 .app {
 	margin: 0 auto;
 	max-width: 550px;

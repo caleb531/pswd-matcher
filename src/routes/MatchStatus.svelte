@@ -5,7 +5,7 @@
 
 <div
 	class="match-status-container"
-	style:visibility={initialPassword !== '' && confirmPassword !== '' ? 'visible' : 'hidden'}
+	class:visible={initialPassword !== '' && confirmPassword !== ''}
 	aria-live="polite"
 >
 	{#if initialPassword === confirmPassword}

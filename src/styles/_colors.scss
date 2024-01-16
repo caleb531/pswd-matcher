@@ -6,12 +6,13 @@
 	--color-black: hsl(0, 0%, 0%);
 	--color-dark-gray: hsl(0, 0%, 10%);
 	--color-light-gray: hsl(0, 0%, 60%);
+	--color-red: hsl(0, 90%, 60%);
 	--color-dark-orange: hsl(15, 100%, 60%);
 	--color-med-orange: hsl(20, 100%, 60%);
 	--color-light-orange: hsl(20, 100%, 70%);
 	--color-pale-yellow: hsl(60, 100%, 97%);
 	--color-beige: hsl(30, 50%, 60%);
-	--color-green: hsl(80, 70%, 50%);
+	--color-green: hsl(100, 60%, 50%);
 	--color-blue: hsl(200, 100%, 70%);
 
 	// Semantic variables
@@ -25,5 +26,5 @@
 	--color-input-text-placeholder-focus: var(--color-beige);
 	--color-input-shadow-focus: var(--color-light-orange);
 	--color-status-match: var(--color-green);
-	--color-status-mismatch: var(--color-med-orange);
+	--color-status-mismatch: var(--color-red);
 }

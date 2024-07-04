@@ -20,7 +20,8 @@ const config = {
 				'font-src': ["'self'", 'data:'],
 				'style-src': ["'self'"],
 				'script-src': ["'self'"],
-				'connect-src': ["'self'"]
+				'connect-src': ["'self'"],
+				'base-uri': ["'none'"]
 			}
 		}
 	}

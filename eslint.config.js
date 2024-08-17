@@ -17,9 +17,6 @@ export default [
 			parserOptions: {
 				parser: ts.parser
 			}
-		},
-		rules: {
-			'@typescript-eslint/no-unused-vars': 'off'
 		}
 	},
 	{
@@ -28,6 +25,10 @@ export default [
 				...globals.browser,
 				...globals.node
 			}
+		},
+		rules: {
+			'no-unused-vars': 'off',
+			'@typescript-eslint/no-unused-vars': 'off'
 		}
 	},
 	{

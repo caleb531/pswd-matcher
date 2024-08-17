@@ -36,6 +36,7 @@ export default [
 			'node_modules',
 			'build',
 			'dist',
+			'coverage',
 			'.svelte-kit',
 			'.vercel',
 			'package',

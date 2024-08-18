@@ -1,5 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vitest/config';
+import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
 	plugins: [sveltekit()],
@@ -8,7 +8,7 @@ export default defineConfig({
 		globals: true,
 		include: ['src/**/*.{test,spec}.{js,ts}'],
 		coverage: {
-			exclude: ['build', '.*'],
+			exclude: ['build', '*.config.js', ...coverageConfigDefaults.exclude],
 			reporter: ['text', 'lcov', 'html', 'text-summary']
 		}
 	}

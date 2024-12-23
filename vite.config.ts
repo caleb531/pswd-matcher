@@ -8,6 +8,20 @@ export default defineConfig(({ mode }) => ({
 	resolve: {
 		conditions: mode === 'test' ? ['browser'] : []
 	},
+	// Even though we are using Vite 6 for the application, Vitest still uses Vite
+	// 5 internally (because it technically does not support Vite 6 yet); this
+	// fortunately does not create any incompatibilities since Vitest does not
+	// require Vite as a peer dependency, however when we run the tests, we still
+	// see the Sass deprecation warning due to Vite 5's use of the legacy Sass
+	// API; to fix this, we simply force the use of the modern sass API for both
+	// the Vite 5 and Vite 6 instances
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern-compiler'
+			}
+		}
+	},
 	test: {
 		environment: 'jsdom',
 		globals: true,

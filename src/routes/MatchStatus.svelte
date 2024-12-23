@@ -1,6 +1,10 @@
 <script lang="ts">
-	export let initialPassword: string;
-	export let confirmPassword: string;
+	interface Props {
+		initialPassword: string;
+		confirmPassword: string;
+	}
+
+	let { initialPassword, confirmPassword }: Props = $props();
 </script>
 
 <div

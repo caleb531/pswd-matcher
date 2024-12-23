@@ -1,10 +1,21 @@
 <script lang="ts">
-	export let id: string;
-	export let label: string;
-	export let placeholder: string;
-	export let value: string;
-	// Whether or not the actual password is shown within the input
-	export let reveal = false;
+	
+	interface Props {
+		id: string;
+		label: string;
+		placeholder: string;
+		value: string;
+		// Whether or not the actual password is shown within the input
+		reveal?: boolean;
+	}
+
+	let {
+		id,
+		label,
+		placeholder,
+		value = $bindable(),
+		reveal = false
+	}: Props = $props();
 
 	// Svelte prohibits us from binding to the input's `value` attribute
 	// directly because the input type is not static (see
@@ -38,8 +49,8 @@
 	class="password"
 	{placeholder}
 	{id}
-	on:input={(event) => updateValue(event)}
-	on:keydown={switchInputsOnEnter}
+	oninput={(event) => updateValue(event)}
+	onkeydown={switchInputsOnEnter}
 	data-toggle-focus-via-enter
 	data-1p-ignore
 />

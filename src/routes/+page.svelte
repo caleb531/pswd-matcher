@@ -6,10 +6,10 @@
 	import RevealPasswordsToggle from './RevealPasswordsToggle.svelte';
 
 	// Keep track of passwords being entered for comparison
-	let initialPassword = '';
-	let confirmPassword = '';
+	let initialPassword = $state('');
+	let confirmPassword = $state('');
 	// A boolean to keep track of when the password inputs are revealed
-	let arePasswordsRevealed = false;
+	let arePasswordsRevealed = $state(false);
 </script>
 
 <svelte:head>

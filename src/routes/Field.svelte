@@ -1,7 +1,12 @@
 <script lang="ts">
-	export let id: string = '';
+	interface Props {
+		id?: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let { id = '', children }: Props = $props();
 </script>
 
 <div class="field" data-field-id={id}>
-	<slot />
+	{@render children?.()}
 </div>

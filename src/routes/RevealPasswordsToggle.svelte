@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let enabled: boolean;
+	interface Props {
+		enabled: boolean;
+	}
+
+	let { enabled = $bindable() }: Props = $props();
 </script>
 
 <label for="reveal-passwords">Reveal passwords?</label>

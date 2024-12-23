@@ -8,13 +8,11 @@ export default defineConfig(({ mode }) => ({
 	resolve: {
 		conditions: mode === 'test' ? ['browser'] : []
 	},
-	// Even though we are using Vite 6 for the application, Vitest still uses Vite
-	// 5 internally (because it technically does not support Vite 6 yet); this
-	// fortunately does not create any incompatibilities since Vitest does not
-	// require Vite as a peer dependency, however when we run the tests, we still
-	// see the Sass deprecation warning due to Vite 5's use of the legacy Sass
-	// API; to fix this, we simply force the use of the modern sass API for both
-	// the Vite 5 and Vite 6 instances
+	// Vitest does not officially support Vite 6 as of yet, and if we try to
+	// upgrade, we get TypeScript errors loading the SvelteKit plugin; to work
+	// around this, the application must remain on Vite 5 for the time being
+	// (until Vitest officially supports Vite 6); with that, we must enable the
+	// use of the modern Sass API in Vite 5
 	css: {
 		preprocessorOptions: {
 			scss: {

@@ -28,17 +28,23 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		// Content Security Policy
-		csp: {
-			directives: {
-				'default-src': ["'none'"],
-				'img-src': ["'self'"],
-				'font-src': ["'self'", 'data:'],
-				'style-src': ["'self'", "'sha256-S8qMpvofolR8Mpjy4kQvEm7m1q8clzU4dfDH0AmvZjo='"],
-				'script-src': ["'self'"],
-				'connect-src': ["'self'"],
-				'base-uri': ["'none'"]
-			}
-		}
+		csp:
+			process.env.NODE_ENV === 'production'
+				? {
+						directives: {
+							'default-src': ["'none'"],
+							'img-src': ["'self'"],
+							'font-src': ["'self'", 'data:'],
+							'style-src': [
+								"'self'",
+								"'sha256-S8qMpvofolR8Mpjy4kQvEm7m1q8clzU4dfDH0AmvZjo='"
+							],
+							'script-src': ["'self'"],
+							'connect-src': ["'self'"],
+							'base-uri': ["'none'"]
+						}
+					}
+				: undefined
 	}
 };
 

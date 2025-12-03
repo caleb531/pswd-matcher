@@ -21,7 +21,9 @@ describe('pswd matcher', () => {
 		await userEvent.type(initialPasswordInput, initialPassword);
 		expect(initialPasswordInput).toHaveValue(initialPassword);
 		expect(screen.queryByText('Passwords match')).not.toBeInTheDocument();
-		expect(screen.queryByText('Passwords do not match')?.parentElement).not.toHaveClass('visible');
+		expect(screen.queryByText('Passwords do not match')?.parentElement).not.toHaveClass(
+			'visible'
+		);
 	});
 
 	it('should populate confirm password only', async () => {
@@ -31,7 +33,9 @@ describe('pswd matcher', () => {
 		await userEvent.type(confirmPasswordInput, confirmPassword);
 		expect(confirmPasswordInput).toHaveValue(confirmPassword);
 		expect(screen.queryByText('Passwords match')).not.toBeInTheDocument();
-		expect(screen.queryByText('Passwords do not match')?.parentElement).not.toHaveClass('visible');
+		expect(screen.queryByText('Passwords do not match')?.parentElement).not.toHaveClass(
+			'visible'
+		);
 	});
 
 	it('should populate mismatching passwords', async () => {

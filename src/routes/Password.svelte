@@ -1,5 +1,4 @@
 <script lang="ts">
-	
 	interface Props {
 		id: string;
 		label: string;
@@ -9,13 +8,7 @@
 		reveal?: boolean;
 	}
 
-	let {
-		id,
-		label,
-		placeholder,
-		value = $bindable(),
-		reveal = false
-	}: Props = $props();
+	let { id, label, placeholder, value = $bindable(), reveal = false }: Props = $props();
 
 	// Svelte prohibits us from binding to the input's `value` attribute
 	// directly because the input type is not static (see
@@ -33,9 +26,14 @@
 		if (event.key !== 'Enter') {
 			return;
 		}
-		const formElements = Array.from(event.currentTarget.form?.elements ?? []) as HTMLInputElement[];
+		const formElements = Array.from(
+			event.currentTarget.form?.elements ?? []
+		) as HTMLInputElement[];
 		const nextField = formElements.find((element) => {
-			return element.hasAttribute('data-toggle-focus-via-enter') && element !== event.currentTarget;
+			return (
+				element.hasAttribute('data-toggle-focus-via-enter') &&
+				element !== event.currentTarget
+			);
 		});
 		// Focus the input and select its contents so the user can type their
 		// password from the beginning again
